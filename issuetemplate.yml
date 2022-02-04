@@ -1,0 +1,39 @@
+name: Issue Tracker
+Description: File a Report
+assignees: 
+-SouthernBloc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to do this! 
+  - type: input
+    id: Contact
+    attributes:
+      label: Discord Details
+      description: Please leave your discord username so we can contact you with further details.
+      placeholder: ex. JohnDoe#0000
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What do you think was supposed to happen?
+      placeholder: Give us a good description of the issue.
+     validations
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log Output Area
+      description: Pleasee copy and paste any relevant logs here.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct]
+      options:
+        - label: I agree to follow this project's Code of Conduct
+        - required: true
